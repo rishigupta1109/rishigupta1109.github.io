@@ -1,0 +1,170 @@
+* {
+    font-family: cursive;
+}
+#navbar{
+    background-image: linear-gradient(to bottom right,white,rgba(190, 231, 245, 0.822));
+    top:1px;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(20, 0, 0, 0.103);
+}
+.tabs{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-right: 500px;
+    align-items: center;
+}
+input[type="radio"]{
+    display: none;
+}
+input[type="radio"]+label:hover{
+    cursor: pointer;
+}
+label{
+    margin: 5px 50px;
+}
+.dash{border-radius: 20px;
+    position: absolute;
+    left: 220px;
+    height:5px;
+    top: 70px;
+    width:50px;
+    transition: 0.25s cubic-bezier(0.18,-0.1,0.8,1.6);
+    background-color: rgb(0, 0, 0);
+}
+p#contactmep {
+    width: 100px;
+}
+
+#About:checked~.dash{
+    top: 70px;
+    left: 185px;
+}
+#Projects:checked~.dash{
+    width:65px;
+    left: 335px;
+}
+#Acheivements:checked~.dash{
+   
+    left: 500px;
+    width:100px;
+}
+#Contact:checked~.dash{
+  
+    left: 700px;
+    width:90px;
+}
+.aboutsection{
+    background-image: linear-gradient(to bottom right,white,rgba(190, 231, 245, 0.822));
+
+}
+#profile{
+    border-radius: 100%;
+    height:300px;
+    
+
+}
+#imgbox{
+    border-radius: 100%;
+    height:320px;
+    width:320px;
+    background-color: white;
+}
+.imagesection{
+    background-color: white;
+    border-radius: 15px;
+    padding:40px;
+}
+.aboutsection{
+    padding: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.aboutcontent{
+    background-color: white;
+    border-radius: 15px;
+    padding:40px;
+    margin:50px;
+}
+.iconwrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.icon{
+    height:35px; 
+    padding: 25px;
+}
+.icon:hover{
+    cursor: pointer;
+}
+.githubico::before,.githubico::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    height:55px;
+    width:55px;
+    left:178px;
+    top:508px;
+    transition: linear 0.49s;
+
+   
+}
+.githubico:hover::before{
+    border-radius: 50%;
+    border-left:4px solid;
+    border-right:4px solid;
+    transform: skewY(20deg);
+    color: black;
+    left:178px;
+    top:508px;
+    cursor: pointer;
+}
+.githubico:hover::after{
+    border-radius: 50%;
+    border-left:4px solid;
+    border-right:4px solid;
+    transform: skewY(-20deg);
+    color: black;
+    left:178px;
+    top:508px;
+    cursor: pointer;
+}
+.instaico::before,.instaico::after{
+    content: '';
+    position: absolute;
+    box-sizing: border-box;
+    height:55px;
+    width:55px;
+    left:262px;
+    top:508px;
+    transition: linear 0.49s;
+   
+}
+.instaico:hover::before{
+    border-radius: 50%;
+    border-left:4px solid;
+    border-right:4px solid;
+    transform: skewY(20deg);
+    color: rgb(221 44 109);
+    left:262px;
+    top:508px;
+    cursor: pointer;
+}
+.instaico:hover::after{
+    border-radius: 50%;
+    border-left:4px solid;
+    border-right:4px solid;
+    transform: skewY(-20deg);
+    color: rgb(84 88 203);
+    left:262px;
+    top:508px;
+    cursor: pointer;
+}
