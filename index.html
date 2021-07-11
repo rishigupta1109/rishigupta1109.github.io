@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -33,31 +36,41 @@
 
 
         <div class="aboutsection">
-            <div class="imagesection">
-                <div class="imgbox">
-                    <img src="./profile.jpg" id="profile" alt="profile">
+
+            <div  class="imagesection">
+                <div data-tilt class="imgbox">
+                    <img src="./pics/profile.jpg" id="profile" alt="profile">
                 </div>
+
             <div class="iconwrapper">
-                <a href="">
-                <div class="githubico">
-                    <img src="./github.png" class="icon" alt="github">
-                </div>
-                </a>
-                <a href="">
-                <div class="instaico">
-                    <img src="./insta.png" class="icon" alt="insta">
-                </div>
-                 </a>    
+                <div class="imgwrap"><a  target="_blank" href="https://github.com/rishigupta1109">
+                    <div class="githubico logosm">
+                        <img src="./pics/github.png" class="icon" alt="github">
+                    </div>
+                    <p class="iconname l">github</p>
+                    </a></div>
+                <div class="imgwrap"><a target="_blank"  href="https://www.instagram.com/rishi_gupta__11/">
+                    <div class="instaico logosm">
+                        <img src="./pics/insta.png" class="icon" alt="insta">
+                    </div><p class="iconname">instagram</p>
+                     </a></div>
+                <div class="imgwrap"><a  target="_blank" href="https://www.linkedin.com/in/rishi-gupta-027298204">
+                    <div class="LinkedInico logosm">
+                        <img src="./pics/linkedin.png" class="icon" alt="linkedin">
+                    </div><p class="iconname l">linkedin</p>
+                     </a>  </div>
             </div>
             </div>
-            <div class="aboutcontent">
+            <div data-tilt class="aboutcontent typewriter">
                 <h1>Rishi Gupta</h1>
+                <br>
                 <h3>frontend-developer</h3>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut officia minus fugit, consequatur debitis quis doloremque culpa incidunt assumenda ratione quam quo. Numquam autem reprehenderit enim? Aliquam maiores aperiam tempore!</p>
+                <p>I am pursuing electronics and telecommunication engineering in IET(DAVV),Indore,India. I am tech enthuasist who likes to learn and implement new concept and skills.I am skilled in HTML ,CSS ,JS and also familiar with some JS libraries which makes a website look good and feel smooth. </p>
             </div>
         </div>
 
        
-    
+        <script src="./tilt.js"></script> 
+        
 </body>
 </html>
