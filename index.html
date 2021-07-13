@@ -1,15 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <link rel="stylesheet" href="index.css">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rishi Gupta||Portfolio</title>
+    <style>
+       html,
+      body {
+        position: relative;
+        height: 100%;
+      }
+
+      body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color: #000;
+        margin: 0;
+        padding: 0;
+      }
+
+      .swiper-container {
+        width: 100%;
+        height: 100%;
+      }
+
+      .swiper-slide {
+        text-align: center;
+        font-size: 18px;
+        background: rgb(0, 0, 0);
+       
+       background-repeat: no-repeat;
+        /* Center slide text vertically */
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: -webkit-flex;
+        display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        -webkit-align-items: center;
+        align-items: center;
+      }
+
+      .swiper-slide img {
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+      }
+      .swiper-container {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .swiper-button-next:after, .swiper-button-prev:after{
+        color: white;
+      }
+      </style>
 </head>
+
 <body>
    
 
@@ -33,12 +88,12 @@
         </div>  
         </div>
 
-
-
+        <!-- about section started -->
         <div class="aboutsection">
-
+            <div class="aboutheading"><h1>ABOUT ME</h1></div>
+        <div style="display: flex; flex-direction: row;">
             <div  class="imagesection">
-                <div data-tilt class="imgbox">
+                <div  class="imgbox">
                     <img src="./pics/profile.jpg" id="profile" alt="profile">
                 </div>
 
@@ -60,17 +115,58 @@
                     </div><p class="iconname l">linkedin</p>
                      </a>  </div>
             </div>
+        </div>
+        <div  class="aboutcontent typewriter">
+            <h1>Rishi Gupta</h1>
+            <br>
+            <h3>frontend-developer</h3>
+            <p>I am pursuing electronics and telecommunication engineering in IET(DAVV),Indore,India. I am tech enthuasist who likes to learn and implement new concept and skills.I am skilled in HTML ,CSS ,JS and also familiar with some JS libraries which makes a website look good and feel smooth. </p>
+        </div>
             </div>
-            <div data-tilt class="aboutcontent typewriter">
-                <h1>Rishi Gupta</h1>
-                <br>
-                <h3>frontend-developer</h3>
-                <p>I am pursuing electronics and telecommunication engineering in IET(DAVV),Indore,India. I am tech enthuasist who likes to learn and implement new concept and skills.I am skilled in HTML ,CSS ,JS and also familiar with some JS libraries which makes a website look good and feel smooth. </p>
+            <!-- about section ended -->
+<div class="hr"></div>
+            <!-- projects section started -->
+            <div class="aboutsection projectsection">
+                <div class="aboutheading"><h1>Projects</h1></div>
+                <div class="projects">
+                    <div class="swiper-container mySwiper">
+                        <div class="swiper-wrapper">
+                          <div class="swiper-slide"  ><img src="./tictactoe.PNG" alt=""></div>
+                          <div class="swiper-slide"  ><img src="./coronatracker.PNG" alt=""></div>
+                          <div class="swiper-slide"  ><img src="./foodstore.PNG" alt=""></div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-pagination"></div>
+                      </div>
+                      </div>
+                </div>
+                   
+                
             </div>
+            <!-- projects section ended -->
+
+           
         </div>
 
-       
-        <script src="./tilt.js"></script> 
-        
+        <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+        <script>
+            var swiper = new Swiper(".mySwiper", {
+        slidesPerView: 1,
+        spaceBetween: 30,
+        loop: true,
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+      });
+          </script>
 </body>
+
+<script src="./tilt.js"></script> 
+
 </html>

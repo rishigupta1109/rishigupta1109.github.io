@@ -12,7 +12,7 @@ body{
 #navbar{
     z-index:2;
     background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.815));
-    top:1px;
+    top:0px;
     color:white;
     position: sticky;
     display: flex;
@@ -69,7 +69,8 @@ p#contactmep {
     width:90px;
 }
 .aboutsection{
-    background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.822));
+    /* background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.822)); */
+    background-color: black;
 
 }
 #profile{
@@ -86,7 +87,7 @@ p#contactmep {
     background-color: white;
 }
 .imagesection{
-  
+    margin: 50px;
     background-color: white;
     border-radius: 15px;
     padding:40px;
@@ -94,7 +95,7 @@ p#contactmep {
 .aboutsection{
     padding: 50px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-items: center;
 }
@@ -128,8 +129,8 @@ p#contactmep {
     box-sizing: border-box;
     height:55px;
     width:55px;
-    left:137px;
-    top:550px;
+    left:185px;
+    top:655px;
     transition: linear 0.49s;
 
    
@@ -140,8 +141,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(20deg);
     color: black;
-    left:137px;
-    top:550px;
+    left:185px;
+    top:655px;
     cursor: pointer;
 }
 .githubico:hover::after{
@@ -150,8 +151,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(-20deg);
     color: black;
-    left:137px;
-    top:550px;
+    left:185px;
+    top:655px;
     cursor: pointer;
 }
 .instaico::before,.instaico::after{
@@ -160,8 +161,8 @@ p#contactmep {
     box-sizing: border-box;
     height:55px;
     width:55px;
-    left:212px;
-    top:550px;
+    left:260px;
+    top:655px;
     transition: linear 0.49s;
    
 }
@@ -171,8 +172,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(20deg);
     color: rgb(221 44 109);
-    left:212px;
-    top:550px;
+    left:260px;
+    top:655px;
     cursor: pointer;
 }
 .instaico:hover::after{
@@ -181,8 +182,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(-20deg);
     color: rgb(84 88 203);
-    left:212px;
-    top:550px;
+    left:260px;
+    top:655px;
     cursor: pointer;
 }
 .LinkedInico::before,.LinkedInico::after{
@@ -191,8 +192,8 @@ p#contactmep {
     box-sizing: border-box;
     height:65px;
     width:65px;
-    left:281px;
-    top:545px;
+    left:330px;
+    top:652px;
     transition: linear 0.49s;
    
 }
@@ -202,8 +203,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(20deg);
     color: rgb(0 123 182);
-    left:281px;
-    top:545px;
+    left:330px;
+    top:652px;
     cursor: pointer;
 }
 .LinkedInico:hover::after{
@@ -212,8 +213,8 @@ p#contactmep {
     border-right:4px solid;
     transform: skewY(-20deg);
     color: rgb(0 123 182);
-    left:281px;
-    top:545px;
+    left:330px;
+    top:652px;
     cursor: pointer;
 }
 
@@ -268,4 +269,28 @@ p#contactmep {
       display:inline;
       top: 0px;
   }
-  
+
+  .aboutheading{
+     
+      color: white;
+      padding:10px;
+  }
+  .aboutheading h1{
+    margin-left: auto;
+  }
+  .hr{
+    display: block; height: 1px;
+    width:1200px;;
+    border: 0; border-top: 1px solid #ccc;
+    margin: 1em 0; padding: 0;
+  }
+  .projectsection{
+      height:500px
+  }
+ #ctimg{
+     height:300px;
+ }
+ .projects{
+     height:500px;
+     width:500px;
+ }
