@@ -340,55 +340,23 @@ p#contactmep {
  .projectimg{
      cursor: pointer;
  }
- .aboutttt{
-     cursor: pointer;
-    overflow: hidden;
-    background-color: #2d2525a4;
-    height: 0;
-    width: 400px;
-    position: absolute;
-    top: 1054px;
-    flex-direction: column;
-    z-index: 5;
-    align-items: center;
-    justify-content: center;
+
+.swiper-slide{
     display: flex;
-    left: 470px;
-    color: white;
-   transition: 0.25s cubic-bezier(0.18,-0.1,0.8,1.6);
-    
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
-.phead{ font-family:sans-serif;
-    font-size: 70px;
-}
-.ppara{ font-family:sans-serif;
-    padding:25px;
-    font-size: 30px;
-}
-.plink{  font-family:sans-serif;
-    font-size: 30px;
-    color: white;
-    background-color: blue;
-    text-decoration: none;
-    padding:10px 25px;
-    border-radius: 30px;
-}
-.aboutct{
-    cursor: pointer;
-   overflow: hidden;
-   background-color: #2d2525a4;
-   height: 0;
-   width: 370px;
-   position: absolute;
-   top: 1054px;
-   flex-direction: column;
-   z-index: 5;
-   align-items: center;
-   justify-content: center;
-   display: flex;
-   left: 470px;
-   color: white;
-   padding:0px;
-  transition: 0.25s cubic-bezier(0.18,-0.1,0.8,1.6);
+.plink{
+    background-color: white;
+    color: black;
+    padding:10px 20px;
+    border-radius: 20px;
+    position: relative;
+  
    
+}
+.plink:hover{
+    box-shadow: 0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 1rem #4aff0f, 0 0 0.1rem#4aff0f, 0 0 8rem #4aff0f, inset 0 0 0.3rem #4aff0f;
+
 }
