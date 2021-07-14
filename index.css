@@ -111,8 +111,8 @@ p#contactmep {
 }
 @media (max-width:420px) {
     .imagesection{
-        margin: auto;
-        padding: auto;
+        margin: 5px;
+        padding: 5px;
     }
     .aboutsection{
         padding:auto;
@@ -145,13 +145,25 @@ p#contactmep {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-        width:auto;
+        width:100%;
         color:white;
     }
     .tabs{
         display: none;
     }
-    
+    .LinkedInico::before,.LinkedInico::after,.githubico::before,.githubico::after,.instaico::before,.instaico::after{
+        display: none;
+    }
+    .projects{
+        width: 100% !important;
+        height:100% !important;
+    }
+    .swiper-slide{
+        width:100%;
+    }
+    .swiper-button-next:after, .swiper-button-prev:after{
+        display: none;
+    }
 }
 .aboutcontent{
     height:280px;
