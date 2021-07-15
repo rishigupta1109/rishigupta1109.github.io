@@ -437,3 +437,44 @@ p#contactmep {
     background-color: rgb(44, 255, 2);
     
 }
+.contactbox{
+    padding:80px;
+    background-color: white;
+    border-radius: 20px;
+}
+input[type="text"],input[type="email"],textarea{
+    height:40px;
+    width:220px;
+    margin:20px;
+    border-radius: 20px;
+    padding:5px;
+    border:2px black solid;
+    font-size: larger;
+    outline: none;
+}
+.inputhead{
+    margin:0;
+    padding:0;
+    user-select: none;
+    position: relative;
+    top: -55px;
+    left: 30px;
+    font-size: larger;
+}
+
+.inputhead:hover{
+    cursor: text;
+}
+#submit{
+    margin-left: 80px;
+    border-radius: 20px;
+    border: none;
+    height: 40px;
+    width: 120px;
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
+#submit:hover{
+    border:4px solid rgb(1, 248, 13);
+}
