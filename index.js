@@ -15,16 +15,16 @@ if(scrollY<1431&&scrollY>=788){
     dash.style.width= "47px";
    
     if(animationbool){
-    innerbar[0].animate([{width:"0px"},{width:"400px"}],{duration: 1000,
+    innerbar[0].animate([{width:"0px"},{width:"80%"}],{duration: 1000,
         fill:"forwards",
         iterations: "1"});
-    innerbar[1].animate([{width:"0px"},{width:"360px"}],{duration: 1000,
+    innerbar[1].animate([{width:"0px"},{width:"70%"}],{duration: 1000,
         fill:"forwards",
         iterations: "1"});
-    innerbar[2].animate([{width:"0px"},{width:"300px"}],{duration: 1000,
+    innerbar[2].animate([{width:"0px"},{width:"65%"}],{duration: 1000,
         fill:"forwards",
         iterations: "1"});
-    innerbar[3].animate([{width:"0px"},{width:"360px"}],{duration: 1000,
+    innerbar[3].animate([{width:"0px"},{width:"70%"}],{duration: 1000,
         fill:"forwards",
         iterations: "1"});
    

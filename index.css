@@ -110,6 +110,16 @@ p#contactmep {
     align-items: center;
 }
 @media (max-width:420px) {
+    .skillbox{
+        height:100%  !important;
+        width:100% !important;
+    }
+    .skill{
+        flex-direction: column !important;
+    }
+    .outerbar{
+        width:100% !important;
+    }
     .imagesection{
         margin: 5px;
         padding: 5px;
