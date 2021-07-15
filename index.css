@@ -48,7 +48,7 @@ label{
     position: absolute;
     left: 220px;
     height:5px;
-    top: 70px;
+    top: 65px;
     width:50px;
     transition: 0.25s cubic-bezier(0.18,-0.1,0.8,1.6);
     background-color: white;
@@ -58,16 +58,16 @@ p#contactmep {
 }
 
 #About:checked~.dash{
-    top: 70px;
-    left: 208px;
+   
+    left: 265px;
 }
 #Projects:checked~.dash{
     width:65px;
-    left: 348px;
+    left: 540px;
 }
-#Acheivements:checked~.dash{
+#Skills:checked~.dash{
    
-    left: 560px;
+    left: 400px;
     width: 47px;
 }
 #Contact:checked~.dash{
@@ -393,4 +393,37 @@ p#contactmep {
 .plink:hover{
     box-shadow: 0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 1rem #4aff0f, 0 0 0.1rem#4aff0f, 0 0 8rem #4aff0f, inset 0 0 0.3rem #4aff0f;
 
+}
+.skillbox{
+  padding:40px;
+    background-color: white;
+    border-radius: 15px;
+    height:300px;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+.skill{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+.outerbar{
+    width:500px;
+    height:20px;
+    border-radius: 20px;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    
+    align-items: center;
+}
+.innerbar{
+    margin-left: 2px;
+    border-radius: 20px;
+  
+    height:15px;
+    background-color: rgb(44, 255, 2);
+    
 }
