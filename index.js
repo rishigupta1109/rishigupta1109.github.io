@@ -1,12 +1,49 @@
 let Projects=document.getElementById("Projects");
 let About=document.getElementById("About");
 let Skills=document.getElementById("Skills");
+let Contact=document.getElementById("Contact");
 let innerbar=document.getElementsByClassName("innerbar");
 let dash =document.getElementsByClassName("dash")[0];
 let inputhead =document.getElementsByClassName("inputhead");
 let Name=document.getElementById("Name")
 let Email=document.getElementById("Email")
 let Message=document.getElementById("Message")
+let form =document.getElementsByTagName("form")[0];
+
+
+var firebaseConfig = {
+    apiKey: "AIzaSyB9pcJ-AVbXxKXPJ_sredOiwcffFRtxAXw",
+    authDomain: "portfolio-99e39.firebaseapp.com",
+    databaseURL: "https://portfolio-99e39-default-rtdb.firebaseio.com",
+    projectId: "portfolio-99e39",
+    storageBucket: "portfolio-99e39.appspot.com",
+    messagingSenderId: "845584493595",
+    appId: "1:845584493595:web:0e2b7b98c5b2ffb6f95cbe",
+    measurementId: "G-ZL4S0WCSDH"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+//   firebase.analytics();
+
+
+var contactRef=firebase.database().ref().child("contactForm");
+
+form.addEventListener("submit",async(e)=>{
+    e.preventDefault();
+    var newcontactRef=contactRef.push();
+    newcontactRef.set({
+        Name:Name.value,
+        Email:Email.value,
+        Message:Message
+    })
+    Name.value="";
+    Email.value="";
+    Message.value="";
+    alert("form submitted successfully");
+
+
+})
+
 
 inputhead[0].addEventListener("click",()=>{
     Name.focus();
@@ -44,6 +81,7 @@ Message.addEventListener("blur",()=>{
 About.addEventListener("click",()=>{window.scrollTo(0,0);  dash.style.left= "265px";dash.style.width= "50px";});
 Projects.addEventListener("click",()=>{window.scrollTo(0,1438);dash.style.left= "540px";dash.style.width= "65px";});
 Skills.addEventListener("click",()=>{window.scrollTo(0,847);dash.style.left= "400px";dash.style.width= "47px";});
+Contact.addEventListener("click",()=>{window.scrollTo(0,2149);dash.style.left= "695px";dash.style.width= "90px";});
 
 let animationbool=true;
 setInterval(()=>{
@@ -71,9 +109,13 @@ if(scrollY<788&&scrollY>=0){
     dash.style.left= "265px";
     dash.style.width= "50px";
 }
-if(scrollY<2500&&scrollY>=1431){
+if(scrollY<2140&&scrollY>=1431){
     dash.style.left= "540px";
     dash.style.width= "65px";
+}
+if(scrollY>=2140){
+    dash.style.left= "695px";
+    dash.style.width= "90px";
 }
 
 },1000)
