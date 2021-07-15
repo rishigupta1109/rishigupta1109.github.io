@@ -34,7 +34,7 @@ form.addEventListener("submit",async(e)=>{
     newcontactRef.set({
         Name:Name.value,
         Email:Email.value,
-        Message:Message
+        Message:Message.value
     })
     Name.value="";
     Email.value="";
