@@ -30,8 +30,9 @@ var contactRef=firebase.database().ref().child("contactForm");
 
 form.addEventListener("submit",async(e)=>{
     e.preventDefault();
-    var newcontactRef=contactRef.push();
-    newcontactRef.set({
+    if(Name.value.trim().length!==0&&!(Email.value.include('@')&&Email.value.include('.com'))&&Message.valuetrim().length!==0){
+        var newcontactRef=contactRef.push();
+        newcontactRef.set({
         Name:Name.value,
         Email:Email.value,
         Message:Message.value
@@ -39,7 +40,10 @@ form.addEventListener("submit",async(e)=>{
     Name.value="";
     Email.value="";
     Message.value="";
-    alert("form submitted successfully");
+    alert("form submitted successfully");}
+    else{
+        alert("Fill the form first");
+    }
 
 
 })
@@ -56,21 +60,21 @@ inputhead[2].addEventListener("click",()=>{
 })
 
 Name.addEventListener("focus",()=>{
-    inputhead[0].style.top="-100px";
+    inputhead[0].style.top="-110px";
 })
 Name.addEventListener("blur",()=>{
     if(Name.value.trim().length===0){inputhead[0].style.top="-55px";}
     
 })
 Email.addEventListener("focus",()=>{
-    inputhead[1].style.top="-100px";
+    inputhead[1].style.top="-110px";
 })
 Email.addEventListener("blur",()=>{
     if(Name.value.trim().length===0){inputhead[1].style.top="-55px";}
     
 })
 Message.addEventListener("focus",()=>{
-    inputhead[2].style.top="-100px";
+    inputhead[2].style.top="-110px";
 })
 Message.addEventListener("blur",()=>{
     if(Name.value.trim().length===0){inputhead[2].style.top="-55px";}
