@@ -478,3 +478,97 @@ input[type="text"],input[type="email"],textarea{
 #submit:hover{
     border:4px solid rgb(1, 248, 13);
 }
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .switch input { 
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  .slider:before {
+    
+    background-image: url("./moon.png");
+    background-size: contain;
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: black;
+    -webkit-transition: .4s;
+    transition: .4s;
+  }
+  
+  input:checked + .slider {
+    background-color: black;
+
+    
+
+  }
+  input:checked + .slider::before {
+    background-color: white;
+    background-image: url("./sun.jpg");
+    background-size: contain;
+  }
+  
+  input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+  }
+  
+  /* Rounded sliders */
+  .slider.round {
+    border-radius: 34px;
+  }
+  
+  .slider.round:before {
+    border-radius: 50%;
+  }
+
+  .whitenav{
+    background-image: linear-gradient(to bottom right,white,white) !important;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.11) !important;
+      color: black !important;
+  }
+  .blackdash{
+      background-color: black;
+  }
+  .whiteabout{
+      background-color: white !important;
+      color: black !important;
+  }
+  .blackheading{
+      color: black !important;
+  }
+  .blackimagesection{
+      background-color: rgb(50 189 189 / 20%) !important;
+  }
+  .blackswiper{
+      background: rgb(50 189 189 / 20%) !important;
+  }

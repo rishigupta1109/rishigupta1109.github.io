@@ -8,6 +8,7 @@ let inputhead =document.getElementsByClassName("inputhead");
 let Name=document.getElementById("Name")
 let Email=document.getElementById("Email")
 let Message=document.getElementById("Message")
+let switchbtn=document.getElementById("switchbtn")
 let form =document.getElementsByTagName("form")[0];
 
 
@@ -30,13 +31,14 @@ var contactRef=firebase.database().ref().child("contactForm");
 
 form.addEventListener("submit",async(e)=>{
     e.preventDefault();
-    if(Name.value.trim().length!==0&&!(Email.value.include('@')&&Email.value.include('.com'))&&Message.valuetrim().length!==0){
+    if(Name.value.trim().length!==0&&(Email.value.includes('@')&&Email.value.includes('.com'))&&Message.value.trim().length!==0){
         var newcontactRef=contactRef.push();
         newcontactRef.set({
         Name:Name.value,
         Email:Email.value,
         Message:Message.value
     })
+    console.log("kam kar gya")
     Name.value="";
     Email.value="";
     Message.value="";
@@ -124,3 +126,17 @@ if(scrollY>=2140){
 
 },1000)
 
+
+switchbtn.addEventListener("click",()=>{
+    Array.from( document.getElementsByClassName("aboutsection")).forEach(element=>{element.classList.toggle("whiteabout");});
+    Array.from( document.getElementsByClassName("aboutheading")).forEach(element=>{element.classList.toggle("blackheading");});
+    Array.from( document.getElementsByClassName("swiper-slide")).forEach(element=>{element.classList.toggle("blackswiper");});
+    Array.from( document.getElementsByClassName("projecthead")).forEach(element=>{element.classList.toggle("blackheading");});
+    document.getElementsByClassName("navsubstitute")[0].classList.toggle("whitenav");
+    document.getElementsByClassName("imagesection")[0].classList.toggle("blackimagesection");
+    document.getElementsByClassName("aboutcontent")[0].classList.toggle("blackimagesection");
+    document.getElementsByClassName("skillbox")[0].classList.toggle("blackimagesection");
+    document.getElementsByClassName("contactbox")[0].classList.toggle("blackimagesection");
+    document.getElementById("navbar").classList.toggle("whitenav");
+    dash.classList.toggle("blackdash");
+})
