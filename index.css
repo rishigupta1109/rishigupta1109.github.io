@@ -11,7 +11,7 @@ body{scroll-behavior: smooth;
     margin: 0;
 }
 #navbar{
-    width:1349px;
+    width:100%;
     z-index:2;
     background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.815));
     top:0;
@@ -25,7 +25,7 @@ body{scroll-behavior: smooth;
 }
 .navsubstitute{
     height:77.5px;
-    width:1349px;
+    width:100%;
     background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.815));
 }
 .tabs{
