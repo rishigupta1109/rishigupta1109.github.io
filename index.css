@@ -57,7 +57,7 @@ p#contactmep {
     width: 100px;
 }
 
-#About:checked~.dash{
+/* #About:checked~.dash{
    
     left: 265px;
 }
@@ -74,7 +74,7 @@ p#contactmep {
   
     left: 695px;
     width:90px;
-}
+} */
 .aboutsection{
     /* background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.822)); */
     background-color: black;
@@ -109,7 +109,19 @@ p#contactmep {
     justify-content: space-between;
     align-items: center;
 }
+@media (max-width:1037px) {
+    #switchbox{
+        display: none;
+    }
+}
 @media (max-width:420px) {
+    .contactbox{
+        padding: 5px !important;
+    }
+    #switchbox{
+        position:  absolute !important;
+        display: flex;
+    }
     .skillbox{
         height:100%  !important;
         width:100% !important;
@@ -434,7 +446,7 @@ p#contactmep {
     border-radius: 20px;
   
     height:15px;
-    background-color: rgb(44, 255, 2);
+    background-color: rgb(255, 255, 255);
     
 }
 .contactbox{
@@ -571,4 +583,8 @@ input[type="text"],input[type="email"],textarea{
   }
   .blackswiper{
       background: rgb(50 189 189 / 20%) !important;
+  }
+  #switchbox{
+    position: fixed; top:20px; left: 1200px;
+    z-index: 5;
   }

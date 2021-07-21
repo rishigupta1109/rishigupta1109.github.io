@@ -9,6 +9,7 @@ let Name=document.getElementById("Name")
 let Email=document.getElementById("Email")
 let Message=document.getElementById("Message")
 let switchbtn=document.getElementById("switchbtn")
+let switchbox=document.getElementById("switchbox")
 let form =document.getElementsByTagName("form")[0];
 
 
@@ -84,15 +85,27 @@ Message.addEventListener("blur",()=>{
 })
 
 
-About.addEventListener("click",()=>{window.scrollTo(0,0);  dash.style.left= "265px";dash.style.width= "50px";});
-Projects.addEventListener("click",()=>{window.scrollTo(0,1438);dash.style.left= "540px";dash.style.width= "65px";});
-Skills.addEventListener("click",()=>{window.scrollTo(0,847);dash.style.left= "400px";dash.style.width= "47px";});
-Contact.addEventListener("click",()=>{window.scrollTo(0,2149);dash.style.left= "695px";dash.style.width= "90px";});
+About.addEventListener("click",()=>{window.scrollTo(0,0);  });
+Projects.addEventListener("click",()=>{window.scrollTo(0,1438);});
+Skills.addEventListener("click",()=>{window.scrollTo(0,847);});
+Contact.addEventListener("click",()=>{window.scrollTo(0,2149);});
+
+function offset(el) {
+    var rect = el.getBoundingClientRect();
+    // console.log({ top: rect.top , left: rect.left});
+    return { top: rect.top , left: rect.left};
+}
+
+
 
 let animationbool=true;
 setInterval(()=>{
+
+    switchbox.style.left=`${window.screen.availWidth-166}px`;
+
 if(scrollY<1431&&scrollY>=788){
-    dash.style.left= "400px";
+    const obj = offset(document.getElementById("Acheivementsp"));
+    dash.style.left= `${obj.left-7}px`;
     dash.style.width= "47px";
    
     if(animationbool){
@@ -112,19 +125,23 @@ if(scrollY<1431&&scrollY>=788){
     animationbool=false;
 }}
 if(scrollY<788&&scrollY>=0){
-    dash.style.left= "265px";
+    const obj = offset(document.getElementById("aboutp"));
+    
+    dash.style.left= `${obj.left-7}px`;
     dash.style.width= "50px";
 }
 if(scrollY<2140&&scrollY>=1431){
-    dash.style.left= "540px";
+    const obj = offset(document.getElementById("projectsp"));
+    dash.style.left= `${obj.left-7}px`;
     dash.style.width= "65px";
 }
 if(scrollY>=2140){
-    dash.style.left= "695px";
+    const obj = offset(document.getElementById("contactmep"));
+    dash.style.left= `${obj.left-7}px`;
     dash.style.width= "90px";
 }
 
-},1000)
+},200)
 
 
 switchbtn.addEventListener("click",()=>{
