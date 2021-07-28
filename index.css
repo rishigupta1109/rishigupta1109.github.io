@@ -114,6 +114,13 @@ p#contactmep {
         display: none;
     }
 }
+@media (max-width:983px) and (min-width:421px) {
+    
+    .LinkedInico::before,.LinkedInico::after,.githubico::before,.githubico::after,.instaico::before,.instaico::after{
+        display: none;
+    }
+    
+}
 @media (max-width:420px) {
     .contactbox{
         padding: 5px !important;
@@ -152,6 +159,7 @@ p#contactmep {
     #AboutBox{
         display: flex;
         flex-direction: column;
+      
     }
     .aboutcontent {
         height: auto;

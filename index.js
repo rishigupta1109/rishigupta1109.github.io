@@ -25,7 +25,7 @@ var firebaseConfig = {
   };
   // Initialize Firebase
   firebase.initializeApp(firebaseConfig);
-//   firebase.analytics();
+  firebase.analytics();
 
 
 var contactRef=firebase.database().ref().child("contactForm");
