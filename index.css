@@ -10,6 +10,12 @@ body{scroll-behavior: smooth;
     padding: 0;
     margin: 0;
 }
+#svgwave1{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
 #navbar{
     width:100%;
     z-index:2;
@@ -24,6 +30,7 @@ body{scroll-behavior: smooth;
     border-bottom: 1px solid rgba(255, 255, 255, 0.322);
 }
 .navsubstitute{
+    z-index: 3;
     height:77.5px;
     width:100%;
     background-image: linear-gradient(to bottom right,black,rgba(0, 0, 0, 0.815));
@@ -46,7 +53,7 @@ label{
 }
 .dash{border-radius: 20px;
     position: absolute;
-    left: 220px;
+    left: 265px;
     height:5px;
     top: 65px;
     width:50px;
@@ -94,6 +101,7 @@ p#contactmep {
     background-color: white;
 }
 .imagesection{
+    z-index: 1;
     margin: 50px;
     background-color: white;
     border-radius: 15px;
@@ -149,6 +157,7 @@ p#contactmep {
     flex-direction: column;
     }
     #navbar{
+        z-index: 4;
         width:auto;
         display: none;
     }
@@ -373,7 +382,7 @@ p#contactmep {
   }
 
   .aboutheading{
-     
+     z-index: 1;
       color: white;
       padding:10px;
   }

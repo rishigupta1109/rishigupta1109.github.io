@@ -33,19 +33,38 @@ var contactRef=firebase.database().ref().child("contactForm");
 form.addEventListener("submit",async(e)=>{
     e.preventDefault();
     if(Name.value.trim().length!==0&&(Email.value.includes('@')&&Email.value.includes('.com'))&&Message.value.trim().length!==0){
-        var newcontactRef=contactRef.push();
-        newcontactRef.set({
-        Name:Name.value,
-        Email:Email.value,
-        Message:Message.value
-    })
-    console.log("kam kar gya")
-    Name.value="";
-    Email.value="";
-    Message.value="";
-    alert("form submitted successfully");}
+        
+        if(prompt("write your name again","naam likhiye yaha")==Name.value){
+            if(confirm("pakka apka naam ye hai")){
+                confirm("mein nahi manta")
+                    alert("maan gaya sahab ! form submitted ");
+                    var newcontactRef=contactRef.push();
+                    newcontactRef.set({
+                    Name:Name.value,
+                    Email:Email.value,
+                    Message:Message.value
+                })
+                console.log("kam kar gya")
+                Name.value="";
+                Email.value="";
+                Message.value="";
+                
+                
+            }
+            else{
+                alert("jhooth nahi bolna chahiye");
+            }
+           
+        }
+        else{
+            alert("jhooth bole kavva kaate");
+        }
+        
+    }
     else{
         alert("Fill the form first");
+        
+
     }
 
 
