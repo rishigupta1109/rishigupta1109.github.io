@@ -130,9 +130,7 @@ p#contactmep {
     
 }
 @media (max-width:420px) {
-    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
-        top:2400px;
-    }
+   
     .contactbox{
         padding: 20px !important;
     }
@@ -205,6 +203,15 @@ p#contactmep {
     }
     .swiper-button-next:after, .swiper-button-prev:after{
         display: none;
+    }
+    .swiper-horizontal>.swiper-pagination-bullets, .swiper-pagination-bullets.swiper-pagination-horizontal, .swiper-pagination-custom, .swiper-pagination-fraction {
+        bottom: 10px;
+        left: 0;
+        z-index: 1;    
+    top: 2327px !important;
+        width: 100%;
+        color: white;
+        background-color: white;
     }
 }
 .aboutcontent{
@@ -437,6 +444,7 @@ p#contactmep {
 
 }
 .skillbox{
+    z-index: 1;
   padding:40px;
     background-color: white;
     border-radius: 15px;
@@ -470,6 +478,7 @@ p#contactmep {
     
 }
 .contactbox{
+    z-index: 1;
     padding:80px;
     background-color: white;
     border-radius: 20px;
