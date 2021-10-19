@@ -430,19 +430,7 @@ p#contactmep {
     justify-content: center;
     align-items: center;
 }
-.plink{
-    background-color: white;
-    color: black;
-    padding:10px 20px;
-    border-radius: 20px;
-    position: relative;
-  
-   
-}
-.plink:hover{
-    box-shadow: 0 0 0.1rem #fff, 0 0 0.1rem #fff, 0 0 1rem #4aff0f, 0 0 0.1rem#4aff0f, 0 0 8rem #4aff0f, inset 0 0 0.3rem #4aff0f;
 
-}
 .skillbox{
     z-index: 1;
   padding:40px;
@@ -506,19 +494,102 @@ input[type="text"],input[type="email"],textarea{
 .inputhead:hover{
     cursor: text;
 }
-#submit{
-    margin-left: 80px;
-    border-radius: 20px;
-    border: none;
-    height: 40px;
-    width: 120px;
-    background-color: black;
-    color: white;
-    cursor: pointer;
+.NeonBtn{
+   font-family: consolas;
+   position: relative;
+   display: inline-block;
+   padding:15px 30px;
+   margin: -19px 0;
+   margin-left: 53px;
+   color:rgb(185, 8, 255);
+   font-size: 20px;
+   transition: 0.5s;
+   letter-spacing: 4px;
+   overflow: hidden;
+   cursor: pointer;
 }
-#submit:hover{
-    border:4px solid rgb(1, 248, 13);
+.NeonBtn:hover{
+background: rgb(185, 8, 255);
+color: white;
+box-shadow: 0 0 5px rgb(185, 8, 255) ,0 0 25px rgb(185, 8, 255),0 0 50px rgb(185, 8, 255),0 0 200px rgb(185, 8, 255);
 }
+.NeonBtn span{
+    position: absolute;
+    display: block;
+}
+.NeonBtn span:nth-child(1){
+    top:0;
+    left :-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(90deg,transparent,rgb(185, 8, 255));
+   animation: animate1 1s linear infinite;
+}
+.NeonBtn span:nth-child(2){
+    top:-100%;
+    right:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(90deg,transparent,rgb(185, 8, 255));
+   animation: animate2 1s linear infinite;
+   animation-delay: 0.25s;
+}
+.NeonBtn span:nth-child(4){
+    bottom:0;
+    left :-100%;
+    width:100%;
+    height:2px;
+    background: linear-gradient(90deg,transparent,rgb(185, 8, 255));
+   animation: animate4 1s linear infinite;
+   animation-delay: 0.5s;
+}
+.NeonBtn span:nth-child(3){
+    top:-100%;
+    left:0;
+    width:2px;
+    height:100%;
+    background: linear-gradient(90deg,transparent,rgb(185, 8, 255));
+   animation: animate3 1s linear infinite;
+   animation-delay: 0.75s;
+}
+.plink{
+    margin-left: -7px;
+}
+@keyframes animate1{
+    0%{
+        left:-100%;
+    }
+    50%,100%{
+        left:100%;
+    }
+}
+@keyframes animate4{
+    0%{
+        left:100%;
+    }
+    50%,100%{
+        left:-100%;
+    }
+}
+@keyframes animate2{
+    0%{
+        top:-100%;
+    }
+    50%,100%{
+        top:100%;
+    }
+}
+@keyframes animate3{
+    0%{
+        top:100%;
+    }
+    50%,100%{
+        top:-100%;
+    }
+}
+
+
+
 
 .switch {
     position: relative;
