@@ -462,7 +462,10 @@ p#contactmep {
     border-radius: 20px;
   
     height:15px;
-    background-color: rgb(255, 255, 255);
+    /* background-color: rgb(255, 255, 255); */
+    background: linear-gradient(
+        298deg, white, transparent );
+        
     
 }
 .contactbox{
