@@ -11,6 +11,7 @@ let Message=document.getElementById("Message")
 let switchbtn=document.getElementById("switchbtn")
 let switchbox=document.getElementById("switchbox")
 let form =document.getElementsByTagName("form")[0];
+let btn = document.getElementById("submit");
 
 
 var firebaseConfig = {
@@ -30,7 +31,7 @@ var firebaseConfig = {
 
 var contactRef=firebase.database().ref().child("contactForm");
 
-form.addEventListener("submit",async(e)=>{
+btn.addEventListener("click",async(e)=>{
     e.preventDefault();
     if(Name.value.trim().length!==0&&(Email.value.includes('@')&&Email.value.includes('.com'))&&Message.value.trim().length!==0){
         
